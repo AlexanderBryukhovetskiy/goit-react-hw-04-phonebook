@@ -15,6 +15,9 @@ const App = () => {
   }, [contacts]);
 
   const onSubmitHandler = newContact => { 
+    console.log(contacts);
+    console.log(newContact);
+
     const isUnique = contacts.filter( contactInStorage => 
       contactInStorage.name.toLowerCase() === newContact.name.toLowerCase());
     
@@ -22,7 +25,7 @@ const App = () => {
       return alert (`${newContact.name} is already in contacts.`);
     }
     else {
-      setContacts( [...contacts, ...newContact] );
+      setContacts( [...contacts, newContact] );
     }
       //console.log('newContact added to phonebook');
   }
