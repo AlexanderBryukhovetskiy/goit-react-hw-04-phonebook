@@ -1,11 +1,11 @@
 import React, { Component }  from "react";
 import css from "./App.module.css";
-import  ContactForm  from "../ContactForm";
+// import  ContactForm  from "../ContactForm";
 import Container from "../Container";
 import  ContactList  from "../ContactList";
 import Filter from "../Filter";
 
-// import ContactFormOnHooks from "components/ContactForm/ContactFormOnHooks";
+import ContactForm from "components/ContactForm";
 
 const LS_KEY = "saved_contacts";
 
