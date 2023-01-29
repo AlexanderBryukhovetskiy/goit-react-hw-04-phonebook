@@ -15,9 +15,6 @@ const App = () => {
   }, [contacts]);
 
   const onSubmitHandler = newContact => { 
-    console.log(contacts);
-    console.log(newContact);
-
     const isUnique = contacts.filter( contactInStorage => 
       contactInStorage.name.toLowerCase() === newContact.name.toLowerCase());
     
@@ -27,7 +24,6 @@ const App = () => {
     else {
       setContacts( [...contacts, newContact] );
     }
-      //console.log('newContact added to phonebook');
   }
 
   const onHandleFilter = event => {
@@ -48,7 +44,6 @@ const App = () => {
   const deleteContact = id => { 
       setContacts( contacts.filter( contact => contact.id !== id) );
   };
-
 
   return (  
       <Container>
