@@ -4,12 +4,10 @@ import Container from "../Container";
 import ContactForm from "components/ContactForm";
 import  ContactList  from "../ContactList";
 import Filter from "../Filter";
-import useLocalStorage from "components/hooks/useLocalStorage";
-
-// const LS_KEY = "saved_contacts";
 
 const App = () => {
-  const [contacts, setContacts] = useLocalStorage('contacts', '');
+  const [contacts, setContacts] = useState(JSON.parse(window.localStorage.getItem('contacts')) ?? '');
+
   const [filter, setFilter] = useState('');
   
   useEffect( () => {
