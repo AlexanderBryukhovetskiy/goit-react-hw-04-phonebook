@@ -1,7 +1,7 @@
 import useLocalStorage from "components/hooks/useLocalStorage";
 import css from "./ContactForm.module.css";
 import { nanoid } from "nanoid";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const ContactForm = ({onSubmit}) => {
 
@@ -28,7 +28,7 @@ const ContactForm = ({onSubmit}) => {
 
     onSubmit({name, number, id: nanoid()});  
     
-    setName('')
+    setName('');
     setNumber('');
   }
 
@@ -65,8 +65,8 @@ const ContactForm = ({onSubmit}) => {
   )
 }
 
-// ContactForm.propTypes = {
-//   onSubmit: PropTypes.func.isRequired
-// };
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired
+};
 
 export default ContactForm;
